@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  redis:
+    image: 'redis:alpine'
+    container_name: redis
+    restart: always
+    ports:
+      - '6379:6379'
+
+  sqs:
+    image: vsouza/sqs-local
+    container_name: sqs
+    restart: always
+    ports:
+      - '9324:9324'
+
+  rabbit:
+    image: "rabbitmq:3.8.3-management"
+    hostname: "rabbit"
+    container_name: rabbit
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "rabbitmq1"
+
+networks:
+  main:
+    driver: bridge
