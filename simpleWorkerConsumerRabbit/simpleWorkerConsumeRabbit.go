@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/dalmarcogd/go-worker-pool/server"
-	"github.com/dalmarcogd/go-worker-pool/worker"
+	"github.com/dalmarcogd/gwp"
+	"github.com/dalmarcogd/gwp/worker"
 	"github.com/streadway/amqp"
 	"log"
 )
@@ -27,11 +27,11 @@ func main() {
 
 	queue, err := channel.QueueDeclare(
 		"test-consume", // name
-		true,                   // durable
-		false,                  // delete when unused
-		false,                  // exclusive
-		false,                  // no-wait
-		nil,                    // arguments
+		true,           // durable
+		false,          // delete when unused
+		false,          // exclusive
+		false,          // no-wait
+		nil,            // arguments
 	)
 	failOnError(err, "Error when declare a queue")
 
@@ -42,7 +42,7 @@ func main() {
 		}), "fail on publishing")
 	}
 
-	if err := server.
+	if err := gwp.
 		New().
 		Stats().
 		HealthCheck().

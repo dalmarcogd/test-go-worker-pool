@@ -2,14 +2,14 @@ package main
 
 import (
 	"errors"
-	"github.com/dalmarcogd/go-worker-pool/server"
-	"github.com/dalmarcogd/go-worker-pool/worker"
+	"github.com/dalmarcogd/gwp"
+	"github.com/dalmarcogd/gwp/worker"
 	"log"
 	"time"
 )
 
 func main() {
-	if err := server.
+	if err := gwp.
 		New().
 		Stats().
 		HealthCheck().
@@ -41,13 +41,6 @@ func main() {
 			},
 			1,
 			false).
-		//Worker(
-		//	"w4",
-		//	func() error {
-		//		time.Sleep(1000)
-		//		return nil
-		//	},
-		//	1).
 		Run(); err != nil {
 		panic(err)
 	}

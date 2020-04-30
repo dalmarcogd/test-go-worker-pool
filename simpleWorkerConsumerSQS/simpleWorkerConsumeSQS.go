@@ -5,8 +5,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
-	"github.com/dalmarcogd/go-worker-pool/server"
-	"github.com/dalmarcogd/go-worker-pool/worker"
+	"github.com/dalmarcogd/gwp"
+	"github.com/dalmarcogd/gwp/worker"
 	"log"
 	"strconv"
 )
@@ -27,10 +27,9 @@ func main() {
 	}
 	fmt.Println(resp)
 
-
 	for i := range []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10} {
 		paramsSend := &sqs.SendMessageInput{
-			MessageBody: aws.String("Testing " +  strconv.Itoa(i)),                            // Required
+			MessageBody: aws.String("Testing " + strconv.Itoa(i)),                   // Required
 			QueueUrl:    aws.String("http://localhost:9324/queue/test-consume-sqs"), // Required
 		}
 		respSend, err := svc.SendMessage(paramsSend)
@@ -41,7 +40,7 @@ func main() {
 		fmt.Println(respSend)
 	}
 
-	if err := server.
+	if err := gwp.
 		New().
 		Stats().
 		HealthCheck().
@@ -51,7 +50,7 @@ func main() {
 		}).
 		Worker("w2", func() error {
 			params := &sqs.ReceiveMessageInput{
-				QueueUrl: aws.String("http://localhost:9324/queue/test-consume-sqs"), // Required
+				QueueUrl:            aws.String("http://localhost:9324/queue/test-consume-sqs"), // Required
 				MaxNumberOfMessages: aws.Int64(10),
 				VisibilityTimeout:   aws.Int64(20),
 			}
