@@ -16,7 +16,10 @@ func main() {
 	params := &sqs.CreateQueueInput{
 		QueueName: aws.String("test-consume-sqs"), // Required
 	}
-	ss, _ := session.NewSession(&aws.Config{Endpoint: aws.String("http://localhost:9324"), Region: aws.String("us-east-1")})
+	ss, _ := session.NewSession(&aws.Config{
+		Endpoint: aws.String("http://localhost:9324"),
+		Region: aws.String("us-east-1"),
+	})
 	svc := sqs.New(ss)
 
 	var resp, err = svc.CreateQueue(params)
