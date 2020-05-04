@@ -2,6 +2,8 @@ github.com/aws/aws-sdk-go v1.30.15 h1:Sd8QDVzzE8Sl+xNccmdj0HwMrFowv6uVUx9tGsCE1Z
 github.com/aws/aws-sdk-go v1.30.15/go.mod h1:5zCpMtNQVjRREroY7sYe8lOMRSxkhG6MZveU8YkpAk0=
 github.com/dalmarcogd/gwp v0.1.4 h1:12zYLjSiJgSSVPpROM8ZfW7cSQFYMW9ZNHsFyARbQ4o=
 github.com/dalmarcogd/gwp v0.1.4/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
+github.com/dalmarcogd/gwp v0.1.11 h1:H9x/7lX3xZDME3MlF7nON9GvEQQ4PunsCfHXGmtuk/4=
+github.com/dalmarcogd/gwp v0.1.11/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
