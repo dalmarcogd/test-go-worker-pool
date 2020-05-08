@@ -1,0 +1,4 @@
+github.com/dalmarcogd/gwp v0.1.13 h1:zRnuzVN9goJjETHgqF4e6a13Q7kti3Gp4I9ON/nPx2U=
+github.com/dalmarcogd/gwp v0.1.13/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
+github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
+github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
