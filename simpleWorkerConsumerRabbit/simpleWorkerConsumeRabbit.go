@@ -64,7 +64,7 @@ func main() {
 				fmt.Println(string(msg.Body))
 			}
 			return nil
-		}, 1, true).
+		}, worker.WithRestartAlways()).
 		Run(); err != nil {
 		panic(err)
 	}

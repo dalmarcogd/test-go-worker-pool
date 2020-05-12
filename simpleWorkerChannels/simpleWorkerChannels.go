@@ -27,8 +27,7 @@ func main() {
 				log.Printf("Produced %t", true)
 				return nil
 			},
-			1,
-			true).
+			worker.WithRestartAlways()).
 		Worker(
 			"w2",
 			func() error {
@@ -38,9 +37,7 @@ func main() {
 						log.Printf("Received %t", r)
 					}
 				}
-			},
-			1,
-			false).
+			}).
 		Run(); err != nil {
 		panic(err)
 	}

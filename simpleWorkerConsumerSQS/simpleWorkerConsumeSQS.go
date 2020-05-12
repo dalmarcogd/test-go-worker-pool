@@ -18,7 +18,7 @@ func main() {
 	}
 	ss, _ := session.NewSession(&aws.Config{
 		Endpoint: aws.String("http://localhost:9324"),
-		Region: aws.String("us-east-1"),
+		Region:   aws.String("us-east-1"),
 	})
 	svc := sqs.New(ss)
 
@@ -34,8 +34,8 @@ func main() {
 
 	for i := range []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10} {
 		paramsSend := &sqs.SendMessageInput{
-			MessageBody: aws.String("Testing " + strconv.Itoa(i)),                   // Required
-			QueueUrl:    queueURL, // Required
+			MessageBody: aws.String("Testing " + strconv.Itoa(i)), // Required
+			QueueUrl:    queueURL,                                 // Required
 		}
 		respSend, err := svc.SendMessage(paramsSend)
 		if err != nil {
@@ -70,7 +70,7 @@ func main() {
 				fmt.Println(aws.StringValue(msg.Body))
 			}
 			return nil
-		}, 1, true).
+		}, worker.WithRestartAlways()).
 		Run(); err != nil {
 		panic(err)
 	}

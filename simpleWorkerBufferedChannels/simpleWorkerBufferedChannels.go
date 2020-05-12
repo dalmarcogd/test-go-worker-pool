@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"github.com/dalmarcogd/gwp"
 	"github.com/dalmarcogd/gwp/worker"
 	"log"
@@ -9,6 +8,10 @@ import (
 )
 
 func main() {
+
+	numberOfConcurrency := 10
+	ch := make(chan bool, numberOfConcurrency)
+
 	if err := gwp.
 		New().
 		Stats().
@@ -21,21 +24,29 @@ func main() {
 			"w1",
 			func() error {
 				<-time.After(10 * time.Second)
-				return errors.New("test")
+				ch <- true
+				ch <- true
+				ch <- true
+				ch <- true
+				ch <- true
+				ch <- true
+				ch <- true
+				log.Printf("Produced %t", true)
+				return nil
 			},
+
 			worker.WithRestartAlways()).
 		Worker(
 			"w2",
 			func() error {
-				<-time.After(30 * time.Second)
-				return nil
-			}).
-		Worker(
-			"w3",
-			func() error {
-				<-time.After(1 * time.Minute)
-				return errors.New("test")
-			}).
+				for {
+					select {
+					case r := <-ch:
+						log.Printf("Received %t", r)
+					}
+				}
+			},
+			worker.WithConcurrency(numberOfConcurrency)).
 		Run(); err != nil {
 		panic(err)
 	}

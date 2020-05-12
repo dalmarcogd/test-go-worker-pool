@@ -55,7 +55,7 @@ func main() {
 
 			_ = batch.Close()
 			return nil
-		}, 1, true).
+		},  worker.WithRestartAlways()).
 		Run(); err != nil {
 		panic(err)
 	}

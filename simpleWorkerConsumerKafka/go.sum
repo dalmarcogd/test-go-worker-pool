@@ -1,5 +1,7 @@
 github.com/dalmarcogd/gwp v0.1.13 h1:zRnuzVN9goJjETHgqF4e6a13Q7kti3Gp4I9ON/nPx2U=
 github.com/dalmarcogd/gwp v0.1.13/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
+github.com/dalmarcogd/gwp v0.2.1 h1:uq3+4D1J4wD9gNJez9itrVRNVBBFZ7/ZMWyLL7qMNhA=
+github.com/dalmarcogd/gwp v0.2.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 h1:YEetp8/yCZMuEPMUDHG0CW/brkkEp8mzqk2+ODEitlw=
 github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21/go.mod h1:+020luEh2TKB4/GOp8oxxtq0Daoen/Cii55CzbTV6DU=
 github.com/golang/snappy v0.0.1 h1:Qgr9rKW7uDUkrbSmQeiDsGa8SjGyCOGtuasMWwvp2P4=
