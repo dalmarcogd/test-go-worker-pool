@@ -1,2 +1,2 @@
 # test-gwp
-Test the library gwp
+Test of library gwp
