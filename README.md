@@ -1,2 +1,2 @@
-# test-go-worker-pool
+# test-gwp
 Test the library go-worker-pool
