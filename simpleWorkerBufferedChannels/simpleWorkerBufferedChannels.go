@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	numberOfConcurrency := 10
+	numberOfConcurrency := 9
 	ch := make(chan bool, numberOfConcurrency)
 
 	if err := gwp.
@@ -23,7 +23,11 @@ func main() {
 		Worker(
 			"w1",
 			func() error {
-				<-time.After(10 * time.Second)
+				<-time.After(2 * time.Second)
+				ch <- true
+				ch <- true
+				ch <- true
+				ch <- true
 				ch <- true
 				ch <- true
 				ch <- true
