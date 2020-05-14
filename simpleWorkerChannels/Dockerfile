@@ -1,6 +1,5 @@
 FROM golang:buster AS builder
-RUN apt-get install gitgo.mod
-                       Dockerfile
+RUN apt-get install git
 WORKDIR /go/src/github.com/dalmarcogd/test-go-worker-pool/simpleWorkerChannels
 ADD ./go* ./
 RUN go mod download
