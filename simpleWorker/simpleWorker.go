@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"github.com/dalmarcogd/gwp"
 	"github.com/dalmarcogd/gwp/worker"
@@ -19,22 +20,38 @@ func main() {
 		}).
 		Worker(
 			"w1",
-			func() error {
-				<-time.After(10 * time.Second)
-				return errors.New("test")
+			func(ctx context.Context) error {
+				select {
+				case <-time.After(10 * time.Second):
+					return errors.New("test")
+				case <-ctx.Done():
+					return errors.New("timeout")
+
+				}
 			},
-			worker.WithRestartAlways()).
+			worker.WithRestartAlways(),
+			worker.WithTimeout(11*time.Second)).
 		Worker(
 			"w2",
-			func() error {
-				<-time.After(30 * time.Second)
+			func(ctx context.Context) error {
+				select {
+				case <-time.After(30 * time.Second):
+				case <-ctx.Done():
+					return ctx.Err()
+
+				}
 				return nil
 			}).
 		Worker(
 			"w3",
-			func() error {
-				<-time.After(1 * time.Minute)
-				return errors.New("test")
+			func(ctx context.Context) error {
+				select {
+				case <-time.After(1 * time.Minute):
+				case <-ctx.Done():
+					return errors.New("test")
+
+				}
+				return nil
 			}).
 		Run(); err != nil {
 		panic(err)

@@ -42,19 +42,22 @@ func main() {
 		HandleError(func(w *worker.Worker, err error) {
 			log.Printf("Worker [%s] error: %s", w.Name, err)
 		}).
-		Worker("w2", func() error {
+		Worker("w2", func(ctx context.Context) error {
 			batch := conn.ReadBatch(10e3, 1e6) // fetch 10KB min, 1MB max
 			b := make([]byte, 10e3)            // 10KB max per message
 			for {
-				_, err := batch.Read(b)
-				if err != nil {
-					break
+				select {
+				case <-ctx.Done():
+					_ = batch.Close()
+					return nil
+				default:
+					_, err := batch.Read(b)
+					if err != nil {
+						break
+					}
+					fmt.Println(string(b))
 				}
-				fmt.Println(string(b))
 			}
-
-			_ = batch.Close()
-			return nil
 		},  worker.WithRestartAlways()).
 		Run(); err != nil {
 		panic(err)

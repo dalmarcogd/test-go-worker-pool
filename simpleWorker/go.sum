@@ -1,11 +1,6 @@
-github.com/dalmarcogd/gwp v0.1.13 h1:zRnuzVN9goJjETHgqF4e6a13Q7kti3Gp4I9ON/nPx2U=
-github.com/dalmarcogd/gwp v0.1.13/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
-github.com/dalmarcogd/gwp v0.2.0 h1:/RaGsUulsrBZroqeP5X6jvFNSuvsvneRHKgbLex7y7s=
-github.com/dalmarcogd/gwp v0.2.0/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/dalmarcogd/gwp v0.2.1 h1:uq3+4D1J4wD9gNJez9itrVRNVBBFZ7/ZMWyLL7qMNhA=
 github.com/dalmarcogd/gwp v0.2.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
-github.com/dalmarcogd/test-go-worker-pool v0.0.0-20200508140106-f5d92d713af9 h1:68nTFWs4m2adoiUj4LV1fdHYoLwPKpQO+oH9nHc8WOc=
-github.com/dalmarcogd/test-go-worker-pool/simpleWorker v0.0.0-20200508140106-f5d92d713af9 h1:e8yeYUQqNjJNCGULNVfDUOwIcw8B1u7+IW5YtQCvs0w=
-github.com/dalmarcogd/test-go-worker-pool/simpleWorker v0.0.0-20200508140106-f5d92d713af9/go.mod h1:e3vGcISShitwZ0svr3JvpLOEZZPh1+jLVgF3yje72I8=
+github.com/dalmarcogd/gwp v0.3.0 h1:LHTWqvPLsxZc9AMsigBiqxvuEV5leHzjZkWsXe/j54s=
+github.com/dalmarcogd/gwp v0.3.0/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=

@@ -4,6 +4,8 @@ github.com/dalmarcogd/gwp v0.1.13 h1:zRnuzVN9goJjETHgqF4e6a13Q7kti3Gp4I9ON/nPx2U
 github.com/dalmarcogd/gwp v0.1.13/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/dalmarcogd/gwp v0.2.1 h1:uq3+4D1J4wD9gNJez9itrVRNVBBFZ7/ZMWyLL7qMNhA=
 github.com/dalmarcogd/gwp v0.2.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
+github.com/dalmarcogd/gwp v0.3.0 h1:LHTWqvPLsxZc9AMsigBiqxvuEV5leHzjZkWsXe/j54s=
+github.com/dalmarcogd/gwp v0.3.0/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=

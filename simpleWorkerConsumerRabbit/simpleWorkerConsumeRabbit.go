@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"github.com/dalmarcogd/gwp"
 	"github.com/dalmarcogd/gwp/worker"
@@ -50,7 +51,7 @@ func main() {
 		HandleError(func(w *worker.Worker, err error) {
 			log.Printf("Worker [%s] error: %s", w.Name, err)
 		}).
-		Worker("w2", func() error {
+		Worker("w2", func(ctx context.Context) error {
 			msgs, err := channel.Consume(queue.Name,
 				"",
 				true,
@@ -60,10 +61,14 @@ func main() {
 				nil)
 			failOnError(err, "Error when create consumer")
 
-			for msg := range msgs {
-				fmt.Println(string(msg.Body))
+			for  {
+				select {
+				case <-ctx.Done():
+					return nil
+				case msg := <-msgs :
+					fmt.Println(string(msg.Body))
+				}
 			}
-			return nil
 		}, worker.WithRestartAlways()).
 		Run(); err != nil {
 		panic(err)

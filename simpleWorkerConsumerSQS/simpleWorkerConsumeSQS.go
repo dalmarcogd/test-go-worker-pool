@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -53,23 +54,29 @@ func main() {
 		HandleError(func(w *worker.Worker, err error) {
 			log.Printf("Worker [%s] error: %s", w.Name, err)
 		}).
-		Worker("w2", func() error {
+		Worker("w2", func(ctx context.Context) error {
 			params := &sqs.ReceiveMessageInput{
 				QueueUrl:            queueURL, // Required
 				MaxNumberOfMessages: aws.Int64(10),
 				VisibilityTimeout:   aws.Int64(20),
 			}
-			resp, err := svc.ReceiveMessage(params)
 
-			if err != nil {
-				fmt.Println(err.Error())
-				return err
+			for {
+				select {
+				case <-ctx.Done():
+					return nil
+				default:
+					resp, err := svc.ReceiveMessage(params)
+					if err != nil {
+						fmt.Println(err.Error())
+						return err
+					}
+					fmt.Println(resp.Messages)
+					for _, msg := range resp.Messages {
+						fmt.Println(aws.StringValue(msg.Body))
+					}
+				}
 			}
-			fmt.Println(resp.Messages)
-			for _, msg := range resp.Messages {
-				fmt.Println(aws.StringValue(msg.Body))
-			}
-			return nil
 		}, worker.WithRestartAlways()).
 		Run(); err != nil {
 		panic(err)
