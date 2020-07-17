@@ -4,6 +4,8 @@ github.com/dalmarcogd/gwp v0.2.1 h1:uq3+4D1J4wD9gNJez9itrVRNVBBFZ7/ZMWyLL7qMNhA=
 github.com/dalmarcogd/gwp v0.2.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/dalmarcogd/gwp v0.3.0 h1:LHTWqvPLsxZc9AMsigBiqxvuEV5leHzjZkWsXe/j54s=
 github.com/dalmarcogd/gwp v0.3.0/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
+github.com/dalmarcogd/gwp v0.3.1 h1:vkTYfb8ZbDb8SzZGRDfHe2C15peA9AOZ1/qhE0j2LB4=
+github.com/dalmarcogd/gwp v0.3.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 h1:YEetp8/yCZMuEPMUDHG0CW/brkkEp8mzqk2+ODEitlw=
 github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21/go.mod h1:+020luEh2TKB4/GOp8oxxtq0Daoen/Cii55CzbTV6DU=
 github.com/golang/snappy v0.0.1 h1:Qgr9rKW7uDUkrbSmQeiDsGa8SjGyCOGtuasMWwvp2P4=
@@ -16,6 +18,8 @@ github.com/pierrec/lz4 v2.0.5+incompatible h1:2xWsjqPFWcplujydGg4WmhC/6fZqK42wMM
 github.com/pierrec/lz4 v2.0.5+incompatible/go.mod h1:pdkljMzZIN41W+lC3N2tnIh5sFi+IEE17M5jbnwPHcY=
 github.com/segmentio/kafka-go v0.3.6 h1:+JauPDvHurc4XSJVGniNwFuv4NmRLr1CxWvhWkRAtXA=
 github.com/segmentio/kafka-go v0.3.6/go.mod h1:8rEphJEczp+yDE/R5vwmaqZgF1wllrl4ioQcNKB8wVA=
+github.com/segmentio/kafka-go v0.3.7 h1:UCFPJw6KoVkmrilA2LbWVuybJojHzj6gDDFdV7H7IBs=
+github.com/segmentio/kafka-go v0.3.7/go.mod h1:8rEphJEczp+yDE/R5vwmaqZgF1wllrl4ioQcNKB8wVA=
 github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c h1:u40Z8hqBAAQyv+vATcGgV0YCnDjqSL7/q/JyPhhJSPk=
 github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c/go.mod h1:lB8K/P019DLNhemzwFU4jHLhdvlE6uDZjXFejJXr49I=
 github.com/xdg/stringprep v1.0.0 h1:d9X0esnoa3dFsV0FG35rAT0RIhYFlPq7MiP+DW89La0=

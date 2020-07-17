@@ -4,5 +4,7 @@ github.com/dalmarcogd/gwp v0.2.1 h1:uq3+4D1J4wD9gNJez9itrVRNVBBFZ7/ZMWyLL7qMNhA=
 github.com/dalmarcogd/gwp v0.2.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/dalmarcogd/gwp v0.3.0 h1:LHTWqvPLsxZc9AMsigBiqxvuEV5leHzjZkWsXe/j54s=
 github.com/dalmarcogd/gwp v0.3.0/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
+github.com/dalmarcogd/gwp v0.3.1 h1:vkTYfb8ZbDb8SzZGRDfHe2C15peA9AOZ1/qhE0j2LB4=
+github.com/dalmarcogd/gwp v0.3.1/go.mod h1:3NGAer6gBW5JeoqB0WS7MxkeNLd8mEzg5t1cwbO/50I=
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=

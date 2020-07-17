@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/dalmarcogd/gwp"
-	"github.com/dalmarcogd/gwp/worker"
+	"github.com/dalmarcogd/gwp/pkg/worker"
 	"github.com/streadway/amqp"
 	"log"
 )

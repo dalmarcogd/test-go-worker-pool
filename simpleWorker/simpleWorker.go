@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"github.com/dalmarcogd/gwp"
-	"github.com/dalmarcogd/gwp/worker"
+	"github.com/dalmarcogd/gwp/pkg/worker"
 	"log"
 	"time"
 )
